@@ -7,10 +7,7 @@ const mongoURL = process.env.MONGODB_URL
 
 // Set up MongoDB Connection
 
-mongoose.connect(mongoURL,{
-    tls: true,
-    tlsAllowInvalidCertificates: false
-})
+mongoose.connect(mongoURL)
 
 // Get the default connection
 // Mongoose maintains a default Connection
