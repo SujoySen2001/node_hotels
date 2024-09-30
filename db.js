@@ -9,7 +9,10 @@ const mongoURL = process.env.MONGODB_URL
 
 mongoose.connect(mongoURL,{
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    tls: true,
+    tlsAllowInvalidCertificates: false,
+    tlsVersion: 'TLSv1.2'  // Force TLSv1.2
 })
 
 // Get the default connection
